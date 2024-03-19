@@ -1,4 +1,4 @@
-![Python build & run test](https://github.com/software-students-spring2024/3-python-package-exercise-team-kiwi/tree/main/.github/workflows/build.yaml/badge.svg)
+![Python build & run test](https://github.com/software-students-spring2024/3-python-package-exercise-team-kiwi/actions/workflows/build.yaml/badge.svg)
 
 
 # Python Package Exercise
