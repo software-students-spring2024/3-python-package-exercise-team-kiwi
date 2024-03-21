@@ -1,5 +1,6 @@
 import pytest
 from src.pyRandomMedia.pyMediaFunctions import get_song
+from src.pyRandomMedia.pyMediaFunctions import get_news
 
 class Tests:
     def test_sanity_check(self):
@@ -7,6 +8,7 @@ class Tests:
         actual = True  # the value we see in reality
         assert actual == expected, "Expected True to be equal to True!"
     
+    #Tests for Song Function:
     def test_song_inputs(self):
         actual = get_song("Pop")[1]["genre"]
         assert "Pop" in actual, f"Expected the genre to contain the word Pop, but {actual} does not contain Pop."
@@ -23,3 +25,31 @@ class Tests:
         actual = get_song("Grime")
         assert actual == "No songs found in our list", f"Expected to not find a song because there are no Grime songs in songs_file, but {actual} was found."
     
+    #Tests for News Function:
+
+    def test_newsValues(self):
+        curr = get_news();
+        for item in curr:
+            assert isinstance(item, dict), "Each item in the array must be a dictionary"
+            assert 'title' in item, "Each dictionary must have a 'title' key"
+            assert 'link' in item, "Each dictionary must have a 'link' key"
+            assert 'pubDate' in item, "Each dictionary must have a 'pubDate' key"
+            assert 'url' in item["source"], "Each source must have a 'url' key"
+            assert 'name' in item["source"], "Each source must have a 'name' key"
+
+    def test_inTitle(self):
+        inTitleString = "a"
+        curr = get_news({ "inTitle": inTitleString })
+        for item in curr:
+            assert isinstance(item, dict), "Each item in the array must be a dictionary"
+            assert 'title' in item, "Each dictionary in the array must have a 'title' key"
+            assert isinstance(item['title'], str), "The 'title' key in each dictionary must be a string"
+            assert inTitleString in item['title'], f"The substring '{inTitleString}' is not present in the title: {item['title']}"
+
+    def test_maxNum(self):
+        curr = get_news({ "num": 10 })
+        assert len(curr) <= 10, "The number of articles should be less than or equal to num value"
+
+
+           
+
