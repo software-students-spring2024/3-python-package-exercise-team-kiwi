@@ -1,4 +1,6 @@
 import random
+import feedparser
+import json
 from src.pyRandomMedia.songs_file import songs
 
 def get_song(genre, artist=None, song_name=None, release_date=None):
@@ -16,3 +18,56 @@ def get_song(genre, artist=None, song_name=None, release_date=None):
     else:
         return "No songs found in our list"
 
+
+
+
+
+""" 
+inputObj is the object which holds function options;
+
+Sample input:
+{
+"inTitle": "Dam", #String in title of article
+"num": 15, #Max number of articles to return. 
+}
+"""
+
+def get_news(inputObj = {}):
+
+    # Fetch the RSS feed
+    feed = feedparser.parse('https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en');
+
+    # Initialize an empty list to store parsed items
+    parsed_items = []
+
+    #keep count of items for num; 
+    count = 0; 
+
+    # Iterate over each item in the feed and parse relevant data
+    for item in feed.entries:
+
+        parsed_item = {
+            'title': item.title,
+            'link': item.link,
+            'pubDate': item.published,
+            'source': {
+                'url': item.source.url,
+                'name': item.source.title
+            }
+        }
+
+        if("inTitle" in inputObj.keys()):
+        
+            if(inputObj["inTitle"] in parsed_item["title"]):
+                parsed_items.append(parsed_item);
+                count+=1;
+        else:
+            parsed_items.append(parsed_item);
+            count+=1;
+
+        if("num" in inputObj.keys() and count == inputObj["num"]):
+            return parsed_items
+        
+
+    # Convert the parsed items list to JSON format
+    return parsed_items

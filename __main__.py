@@ -1,4 +1,5 @@
 from src.pyRandomMedia.pyMediaFunctions import get_song
+from src.pyRandomMedia.pyMediaFunctions import get_news
 
 fav_song = get_song("Pop")
 
@@ -7,3 +8,8 @@ if type(fav_song) != str:
             f'Its genre is {fav_song[1]["genre"]} and it was released on {fav_song[1]["release_date"]}')
 else:
       print("I don't have a favorite song.")
+
+
+inTitleString = "a"
+curr = get_news({ "inTitle": inTitleString, "num": 5 })
+print(curr);
