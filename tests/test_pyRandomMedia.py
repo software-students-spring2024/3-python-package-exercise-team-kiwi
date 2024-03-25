@@ -1,6 +1,7 @@
 import pytest
 from src.pyRandomMedia.pyMediaFunctions import get_song
 from src.pyRandomMedia.pyMediaFunctions import get_news
+from src.pyRandomMedia.pyMediaFunctions import get_random_TV_show
 
 class Tests:
     def test_sanity_check(self):
@@ -49,6 +50,26 @@ class Tests:
     def test_maxNum(self):
         curr = get_news({ "num": 10 })
         assert len(curr) <= 10, "The number of articles should be less than or equal to num value"
+    
+    #Tests for TV show function
+
+    def test_return_type(self):
+        """Test if the return type of get_random_TV_show is a dictionary."""
+        result = get_random_TV_show()
+        assert isinstance(result, dict), "Expected result to be a dictionary."
+
+    def test_dictionary_keys(self):
+        """Test if the dictionary has the correct keys."""
+        expected_keys = ['title', 'director', 'cast', 'release_year']
+        result = get_random_TV_show()
+        for key in expected_keys:
+            assert key in result, f"Missing '{key}' in the result dictionary."
+
+    def test_non_empty_values(self):
+        """Test that the values for each key in the dictionary are not empty."""
+        result = get_random_TV_show()
+        for key, value in result.items():
+            assert value, f"Expected '{key}' to have a non-empty value."
 
 
            
