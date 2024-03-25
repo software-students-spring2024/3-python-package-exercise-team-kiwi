@@ -1,6 +1,7 @@
 import random
 import feedparser
 import json
+import pandas as pd
 from src.pyRandomMedia.songs_file import songs
 
 def get_song(genre, artist=None, song_name=None, release_date=None):
@@ -71,3 +72,13 @@ def get_news(inputObj = {}):
 
     # Convert the parsed items list to JSON format
     return parsed_items
+
+
+def get_random_TV_show():
+    data = pd.read_csv('src/pyRandomMedia/netflix_titles.csv')
+    data = data[(data['type'] == 'TV Show') & (data['director'].notnull()) & (data['cast'].notnull()) & (data['release_year'].notnull())]
+    data = data.reset_index(drop=True)
+
+    rand = random.randint(0, len(data) - 1)
+    dic = data.iloc[rand][['title', 'director', 'cast', 'release_year']].to_dict()
+    return dic
