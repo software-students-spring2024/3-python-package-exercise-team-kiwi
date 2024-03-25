@@ -29,7 +29,7 @@ class Tests:
     #Tests for News Function:
 
     def test_newsValues(self):
-        curr = get_news();
+        curr = get_news()
         for item in curr:
             assert isinstance(item, dict), "Each item in the array must be a dictionary"
             assert 'title' in item, "Each dictionary must have a 'title' key"

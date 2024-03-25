@@ -60,11 +60,11 @@ def get_news(inputObj = {}):
         if("inTitle" in inputObj.keys()):
         
             if(inputObj["inTitle"] in parsed_item["title"]):
-                parsed_items.append(parsed_item);
-                count+=1;
+                parsed_items.append(parsed_item)
+                count+=1
         else:
-            parsed_items.append(parsed_item);
-            count+=1;
+            parsed_items.append(parsed_item)
+            count+=1
 
         if("num" in inputObj.keys() and count == inputObj["num"]):
             return parsed_items
