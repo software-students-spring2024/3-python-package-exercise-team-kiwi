@@ -1,5 +1,6 @@
 from src.pyRandomMedia.pyMediaFunctions import get_song
 from src.pyRandomMedia.pyMediaFunctions import get_news
+from src.pyRandomMedia.pyMediaFunctions import get_random_TV_show
 
 fav_song = get_song("Pop")
 
@@ -13,3 +14,6 @@ else:
 inTitleString = "a"
 curr = get_news({ "inTitle": inTitleString, "num": 5 })
 print(curr);
+
+tv_show = get_random_TV_show()
+print(tv_show)

@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pytest = "*"
 feedparser = "*"
+pandas = "*"
 
 [dev-packages]
 
