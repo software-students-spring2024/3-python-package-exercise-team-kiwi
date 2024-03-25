@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e1379003bd97d39411333114e80ffdd58c97352fc24e76c8d6246195b28cc7da"
+            "sha256": "e17f0bbff50bcd91b5f3b7cd0e27339c36ddc52824c5ee8ded9e21fbd40d69ce"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -72,7 +72,7 @@
                 "sha256:f870204a840a60da0b12273ef34f7051e98c3b5961b61b0c2c1be6dfd64fbcd3",
                 "sha256:ffa75af20b44f8dba823498024771d5ac50620e6915abac414251bd971b4529f"
             ],
-            "markers": "python_version >= '3.12'",
+            "markers": "python_version == '3.11'",
             "version": "==1.26.4"
         },
         "packaging": {
@@ -126,6 +126,10 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==1.4.0"
+        },
+        "pyrandommedia": {
+            "editable": true,
+            "file": "."
         },
         "pytest": {
             "hashes": [

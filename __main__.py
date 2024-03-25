@@ -13,7 +13,7 @@ else:
 
 inTitleString = "a"
 curr = get_news({ "inTitle": inTitleString, "num": 5 })
-print(curr);
+print(curr)
 
 tv_show = get_random_TV_show()
 print(tv_show)
