@@ -2,6 +2,7 @@ import pytest
 from src.pyRandomMedia.pyMediaFunctions import get_song
 from src.pyRandomMedia.pyMediaFunctions import get_news
 from src.pyRandomMedia.pyMediaFunctions import get_random_TV_show
+from src.pyRandomMedia.pyMediaFunctions import get_movie
 
 class Tests:
     def test_sanity_check(self):
@@ -70,6 +71,27 @@ class Tests:
         result = get_random_TV_show()
         for key, value in result.items():
             assert value, f"Expected '{key}' to have a non-empty value."
+
+    #Tests for Movie function
+
+    def test_movie_return_type(self):
+        """Test if the return type of get_movie is a dictionary."""
+        result = get_movie()
+        assert isinstance(result, dict), "Expected result to be a dictionary."
+
+    def test_movie_dictionary_keys(self):
+        """Test if the dictionary has the correct keys."""
+        expected_keys = ['movieName', 'movieDirector', 'movieStar1', 'movieStar2', 'movieStar3', 'movieGenre', 'movieReleaseYear']
+        result = get_movie()
+        for key in expected_keys:
+            assert key in result, f"Missing '{key}' in the result dictionary."
+
+    def test_movie_non_empty_values(self):
+        """Test that the values for each key in the dictionary are not empty."""
+        result = get_movie()
+        for key, value in result.items():
+            assert value, f"Expected '{key}' to have a non-empty value."
+
 
 
            

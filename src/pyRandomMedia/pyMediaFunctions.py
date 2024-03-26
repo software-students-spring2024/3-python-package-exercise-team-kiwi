@@ -3,6 +3,7 @@ import feedparser
 import json
 import pandas as pd
 from src.pyRandomMedia.songs_file import songs
+from src.pyRandomMedia.movies_file import movies
 
 def get_song(genre, artist=None, song_name=None, release_date=None):
     if type(genre) != str or (artist is not None and type(artist) != str) or (song_name is not None and type(song_name) != str) or (release_date is not None and type(release_date) != str):
@@ -19,7 +20,29 @@ def get_song(genre, artist=None, song_name=None, release_date=None):
     else:
         return "No songs found in our list"
 
-
+def get_movie():
+    randNum = random.randint(0,len(movies)-1)
+    count = 0
+    for i in movies:
+        if count == randNum:
+            movie_Name = i
+            movie_Director = movies.get(i).get("director")
+            movie_Star1 = movies.get(i).get("star_1")
+            movie_Star2 = movies.get(i).get("star_2")
+            movie_Star3 = movies.get(i).get("star_3")
+            movie_Release_Year = movies.get(i).get("release_year")
+            movie_Genre = movies.get(i).get("genre")
+            randMovie = {
+                'movieName':movie_Name,
+                'movieDirector': movie_Director,
+                'movieStar1':movie_Star1,
+                'movieStar2':movie_Star2,
+                'movieStar3':movie_Star3,
+                'movieGenre': movie_Genre,
+                'movieReleaseYear': movie_Release_Year
+            }
+            return randMovie
+        count+=1
 
 
 
