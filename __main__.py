@@ -16,7 +16,7 @@ inTitleString = "a"
 curr = get_news({ "inTitle": inTitleString, "num": 5 })
 print(curr)
 
-tv_show = get_random_TV_show()
+tv_show = get_random_TV_show(['title', 'director', 'cast', 'release_year'])
 print(tv_show)
 
 movie = get_movie()

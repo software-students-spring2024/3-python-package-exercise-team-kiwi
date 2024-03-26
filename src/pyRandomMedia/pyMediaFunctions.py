@@ -97,11 +97,17 @@ def get_news(inputObj = {}):
     return parsed_items
 
 
-def get_random_TV_show():
+def get_random_TV_show(input_list):
     data = pd.read_csv('src/pyRandomMedia/netflix_titles.csv')
     data = data[(data['type'] == 'TV Show') & (data['director'].notnull()) & (data['cast'].notnull()) & (data['release_year'].notnull())]
     data = data.reset_index(drop=True)
+    col = data.columns.tolist()
+    input_parse = [i for i in input_list if i in col]
 
     rand = random.randint(0, len(data) - 1)
-    dic = data.iloc[rand][['title', 'director', 'cast', 'release_year']].to_dict()
+    dic = {}
+    if input_parse:
+        dic = data.iloc[rand][input_parse].to_dict()
+    else:
+        raise TypeError("Invalid input")
     return dic
