@@ -3,11 +3,10 @@ from src.pyRandomMedia.pyMediaFunctions import get_news
 from src.pyRandomMedia.pyMediaFunctions import get_random_TV_show
 from src.pyRandomMedia.pyMediaFunctions import get_movie
 
-fav_song = get_song("Pop")
+fav_song = get_song("Pop", artist="One")
 
 if type(fav_song) != str:
-      print(f'My favorite song is {fav_song[0]} by {fav_song[1]["artist"]}. ' 
-            f'Its genre is {fav_song[1]["genre"]} and it was released on {fav_song[1]["release_date"]}')
+      print(fav_song)
 else:
       print("I don't have a favorite song.")
 

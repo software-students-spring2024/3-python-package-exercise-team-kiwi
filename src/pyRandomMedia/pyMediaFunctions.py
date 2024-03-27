@@ -1,6 +1,5 @@
 import random
 import feedparser
-import json
 import pandas as pd
 from src.pyRandomMedia.songs_file import songs
 from src.pyRandomMedia.movies_file import movies
