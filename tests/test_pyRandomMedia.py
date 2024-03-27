@@ -55,22 +55,36 @@ class Tests:
     #Tests for TV show function
 
     def test_return_type(self):
-        """Test if the return type of get_random_TV_show is a dictionary."""
-        result = get_random_TV_show()
+        """Test if the return type of get_random_TV_show is a dictionary with valid input."""
+        input_list = ['title', 'director', 'cast', 'release_year']
+        result = get_random_TV_show(input_list)
         assert isinstance(result, dict), "Expected result to be a dictionary."
 
     def test_dictionary_keys(self):
-        """Test if the dictionary has the correct keys."""
-        expected_keys = ['title', 'director', 'cast', 'release_year']
-        result = get_random_TV_show()
-        for key in expected_keys:
-            assert key in result, f"Missing '{key}' in the result dictionary."
+        """Test if the dictionary has the correct keys based on input."""
+        input_list = ['title', 'director', 'cast']
+        expected_keys = set(input_list)
+        result = get_random_TV_show(input_list)
+        assert set(result.keys()) == expected_keys, "The result dictionary does not have the correct keys."
 
     def test_non_empty_values(self):
         """Test that the values for each key in the dictionary are not empty."""
-        result = get_random_TV_show()
+        input_list = ['title', 'director', 'cast']
+        result = get_random_TV_show(input_list)
         for key, value in result.items():
             assert value, f"Expected '{key}' to have a non-empty value."
+
+    def test_invalid_input_raises_error(self):
+        """Test that providing an invalid input list raises a TypeError."""
+        input_list = ['invalid_column']
+        with pytest.raises(TypeError):
+            get_random_TV_show(input_list)
+
+    def test_empty_input_raises_error(self):
+        """Test that providing an empty input list raises a TypeError."""
+        input_list = []
+        with pytest.raises(TypeError):
+            get_random_TV_show(input_list)
 
     #Tests for Movie function
 
