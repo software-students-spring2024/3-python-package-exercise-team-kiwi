@@ -20,29 +20,37 @@ def get_song(genre, artist=None, song_name=None, release_date=None):
     else:
         return "No songs found in our list"
 
-def get_movie():
-    randNum = random.randint(0,len(movies)-1)
-    count = 0
+def get_movie(genre):
+    possible_movies = []
     for i in movies:
-        if count == randNum:
-            movie_Name = i
-            movie_Director = movies.get(i).get("director")
-            movie_Star1 = movies.get(i).get("star_1")
-            movie_Star2 = movies.get(i).get("star_2")
-            movie_Star3 = movies.get(i).get("star_3")
-            movie_Release_Year = movies.get(i).get("release_year")
-            movie_Genre = movies.get(i).get("genre")
-            randMovie = {
-                'movieName':movie_Name,
-                'movieDirector': movie_Director,
-                'movieStar1':movie_Star1,
-                'movieStar2':movie_Star2,
-                'movieStar3':movie_Star3,
-                'movieGenre': movie_Genre,
-                'movieReleaseYear': movie_Release_Year
-            }
-            return randMovie
-        count+=1
+        for genreIndex in movies.get(i).get("genre"):
+            if genre.lower() == genreIndex.lower():
+                possibleDict = {}
+                possibleDict[i] = movies.get(i)
+                possible_movies.append(possibleDict)
+
+    randNum = random.randint(0,len(possible_movies)-1)
+    randMovie = possible_movies[randNum]
+
+
+    movie_Name = list(randMovie.keys())[0]
+    movie_Director = randMovie.get(movie_Name).get("director")
+    movie_Star1 = randMovie.get(movie_Name).get("star_1")
+    movie_Star2 = randMovie.get(movie_Name).get("star_2")
+    movie_Star3 = randMovie.get(movie_Name).get("star_3")
+    movie_Release_Year = randMovie.get(movie_Name).get("release_year")
+    movie_Genre = randMovie.get(movie_Name).get("genre")
+
+    result = {
+        'movieName':movie_Name,
+        'movieDirector': movie_Director,
+        'movieStar1':movie_Star1,
+        'movieStar2':movie_Star2,
+        'movieStar3':movie_Star3,
+        'movieGenre': movie_Genre,
+        'movieReleaseYear': movie_Release_Year
+        }
+    return result
 
 
 
