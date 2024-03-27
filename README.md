@@ -11,14 +11,39 @@ Sang
 ## Usage
 Once installed and imported, you can call each function to generate a certain kind of media.
 
-For example, you can call the get_song() function to generate a song in a specific genre, with optional specifications for the artist/band names, song title, and release date. All inputs must be strings. 
+### get_song()
+You can call the get_song() function to generate a song in a specific genre, with optional specifications for the artist/band names, song title, and release date. All inputs must be strings. 
 
 ![get_song() example](./images/song_example.png)
 
 The variable fav_song will now contain a tuple holding a song in the Pop genre by an artist/band with the word "One" in it. An example tuple would look like this: 
 ![song output](./images/song_output.png)
 
-We can also 
+Additionally, if no song meeting the arguments' criteria is found, get_song() will return a string. 
+
+### get_news()
+
+You can call the get_news() function to generate a list of current events. The function takes a dictionary as an argument that optionally allows the user to only return a certain number of events as well as news title with a certain string in them. 
+
+![get_news() example](./images/news_example.png)
+
+The variable curr will now contain a list of 5 current news stories whose titles have the string "a" in them. Each news story is represented as a dictionary:
+
+![news story output](./images/news_output.png)
+
+### get_movie()
+
+You can call the get_movie() function to generate a movie in a specific genre. 
+
+![get_movie() example](./images/movie_example.png)
+
+The variable movie will now contain a dictionary holding a movie in the action genre. An example of dictionary would look like this:
+
+![movie output](./images/movie_output.png)
+
+### get_random_TV_show()
+
+Sang- just copy the format above for your function
 
 ## Function Documentation
 Sang

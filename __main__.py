@@ -20,9 +20,3 @@ print(tv_show)
 
 movie = get_movie("action")
 print(movie)
-
-movie2 = get_movie("animation")
-print(movie2)
-
-movie2 = get_movie("crime")
-print(movie2)
