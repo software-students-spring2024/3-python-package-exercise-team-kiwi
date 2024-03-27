@@ -60,7 +60,13 @@ The variable movie will now contain a dictionary holding a movie in the action g
 
 ### get_random_TV_show()
 
-Sang- just copy the format above for your function
+You can call the get_random_TV_show() function to generate a TV show.
+
+![get_random_TV_show() example](./images/tv_example.png)
+
+The variable tv will now contain a dictionary holding a TV show and its details. An example of dictionary would look like this:
+
+![tv output](./images/tv_output.png)
 
 ## Function Documentation
 Sang
