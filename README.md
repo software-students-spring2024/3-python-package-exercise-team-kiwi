@@ -36,8 +36,6 @@ You can call the get_song() function to generate a song in a specific genre, wit
 The variable fav_song will now contain a tuple holding a song in the Pop genre by an artist/band with the word "One" in it. An example tuple would look like this: 
 ![song output](./images/song_output.png)
 
-Additionally, if no song meeting the arguments' criteria is found, get_song() will return a string. 
-
 ### get_news()
 
 You can call the get_news() function to generate a list of current events. The function takes a dictionary as an argument that optionally allows the user to only return a certain number of events as well as news title with a certain string in them. 
@@ -60,17 +58,60 @@ The variable movie will now contain a dictionary holding a movie in the action g
 
 ### get_random_TV_show()
 
-You can call the get_random_TV_show() function to generate a TV show.
+You can call the get_random_TV_show() function to generate a dictionary that optionally holds any number of of the following attributes: title, director, cast, country, date_added, release_year, rating, duration, listed_in, description
 
-![get_random_TV_show() example](./images/tv_example.png)
+![tv show example](./images/tv_example.png)
 
-The variable tv will now contain a dictionary holding a TV show and its details. An example of dictionary would look like this:
+The variable tv_show will now hold a dictionary that contains a random TV show's title, director, cast, and release year
 
-![tv output](./images/tv_output.png)
+![tv show output](./images/tv_output.png)
 
 ## Function Documentation
-Sang
-Include link to example program here too
+
+### get_song()
+
+Required arguments: genre
+
+Optional arguments: artist, song_name, release_date
+
+Return Type: Dictionary
+
+All arguments must be strings or the function will raise a TypeError. 
+
+The function will iterate through our dictionary of songs and add all of the songs that match the initial inputs into a new dictionary of possible songs. Then, the function will randomly choose and return one of the songs from this new dictionary. If no songs were found, the function will return a string saying so. 
+
+### get_news()
+
+Required arguments: None.
+
+Optional arguments: inputObj (Dictionary) with possible keys:
+inTitle: A string to match within the title of the news article.
+num: The maximum number of articles to return.
+
+Return Type: List of Dictionaries.
+
+Fetches news articles from a predefined RSS feed. If inputObj is provided, it filters the results based on the presence of the specified string in the article's title (inTitle) and limits the output to a specified number of articles (num). Returns a list of dictionaries, each representing a news article with keys for the title, link, publication date, and source (URL and name).
+
+### get_movie()
+
+Required arguments: genre (String).
+
+Optional arguments: None.
+
+Return Type: Dictionary.
+
+Iterates through a dictionary of movies, filtering them based on the specified genre. Selects a random movie from the filtered list and returns a dictionary with details about the movie, including the name, director, stars, genre, and release year. If no movies match the genre, the behavior is not specified in the snippet provided, but typically, it could return an empty dictionary or a specific message.
+
+### get_random_TV_show()
+
+Required arguments: input_list (List of Strings) and possible inputs: 
+['show_id', 'type', 'title', 'director', 'cast', 'country', 'date_added', 'release_year', 'rating', 'duration','listed_in', 'description'] 
+
+Optional arguments: None.
+
+Return Type: Dictionary.
+
+Reads a CSV file containing TV show data and filters rows based on specific criteria (type is 'TV Show', and 'director', 'cast', and 'release_year' are not null). It then filters columns based on the input_list provided by the user, where input_list contains column names of interest. The function randomly selects one of the filtered TV shows and returns a dictionary with the selected data. If input_list includes invalid column names or is empty, the function raises a TypeError indicating "Invalid input".
 
 ## How to contribute (Virtual environment, install dependencies, and build and test your package)
 
@@ -100,5 +141,4 @@ Here's the link to our package on PyPI:
 
 
 [Link](https://test.pypi.org/project/pyrandommedia/)
-
 
