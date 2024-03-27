@@ -8,7 +8,9 @@ We wanted to create a package that allows users to generate different kinds of m
 ## Installation
 
 1). Make a pipenv virtual environment and install the latest version of the package using: pipenv install -i https://test.pypi.org/simple/ pyrandommedia.
+
 2). Start the virtual environment with the command: pipenv shell.
+
 3). Create a Python program file that imports the functions and uses it.
 Example:
 `from pyrandommedia import get_news`
@@ -17,7 +19,10 @@ Example:
 `from pyrandommedia import get_movie`
 
 4). Run the program using: python3 -m sample_program.py. Run the python command in the virtual environment.
+
 5). Use the command exit to end the virtual environment.
+
+[Link to sample file](https://github.com/software-students-spring2024/3-python-package-exercise-team-kiwi/blob/main/sample_program.py)
 
 
 ## Usage
