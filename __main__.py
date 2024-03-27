@@ -18,6 +18,11 @@ print(curr)
 tv_show = get_random_TV_show()
 print(tv_show)
 
-movie = get_movie()
-print(f'Your movie is {movie.get("movieName")}, directed by {movie.get("movieDirector")}, starring {movie.get("movieStar1")}, {movie.get("movieStar2")}, and {movie.get("movieStar3")}. This {movie.get("movieGenre")} movie was released in {movie.get("movieReleaseYear")}.')
+movie = get_movie("action")
 print(movie)
+
+movie2 = get_movie("animation")
+print(movie2)
+
+movie2 = get_movie("crime")
+print(movie2)

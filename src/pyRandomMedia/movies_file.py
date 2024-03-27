@@ -2,7 +2,7 @@ movies = {
     "The Shawshank Redemption": 
         {
             "director": "Frank Darabont",
-            "genre": "Drama",
+            "genre": ["Drama"],
             "star_1": "Tim Robbins",
             "star_2": "Morgan Freeman",
             "star_3": "Bob Gunton",
@@ -12,7 +12,7 @@ movies = {
     "The Godfather": 
         {
             "director": "Francis Ford Coppola",
-            "genre": "Crime",
+            "genre": ["Crime", "Drama"],
             "star_1": "Marlon Brando",
             "star_2": "Al Pacino",
             "star_3": "James Caan",
@@ -22,7 +22,7 @@ movies = {
     "The Dark Knight": 
         {
             "director": "Christopher Nolan",
-            "genre": "Action",
+            "genre": ["Action","Crime","Drama"],
             "star_1": "Christian Bale",
             "star_2": "Heath Ledger",
             "star_3": "Aaron Eckhart",
@@ -32,7 +32,7 @@ movies = {
     "The Godfather Part II": 
         {
             "director": "Francis Ford Coppola",
-            "genre": "Crime",
+            "genre": ["Crime", "Drama"],
             "star_1": "Al Pacino",
             "star_2": "Robert de Niro",
             "star_3": "Robert Duvall",
@@ -42,7 +42,7 @@ movies = {
     "12 Angry Men": 
         {
             "director": "Sidney Lumet",
-            "genre": "Crime",
+            "genre": ["Crime","Drama"],
             "star_1": "Henry Fonda",
             "star_2": "Lee J. Cobb",
             "star_3": "Martin Balsam",
@@ -52,7 +52,7 @@ movies = {
     "Schindler's List": 
         {
             "director": "Steven Spielberg",
-            "genre": "Biography",
+            "genre": ["Biography","Drama","History"],
             "star_1": "Liam Neeson",
             "star_2": "Ralph Fiennes",
             "star_3": "Ben Kingsley",
@@ -62,7 +62,7 @@ movies = {
     "The Lord of the Rings: The Return of the King": 
         {
             "director": "Peter Jackson",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Elijah Wood",
             "star_2": "Viggo Mortensen",
             "star_3": "Ian McKellen",
@@ -72,17 +72,17 @@ movies = {
     "Pulp Fiction": 
         {
             "director": "Quentin Tarantino",
-            "genre": "Crime",
+            "genre": ["Crime","Drama"],
             "star_1": "John Travolta",
             "star_2": "Uma Thurman",
             "star_3": "Samuel L. Jackson",
-            "release_year": ""
+            "release_year": "1994"
         },
 
     "The Lord of the Rings: The Fellowship of the Ring": 
         {
             "director": "Peter Jackson",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Elijah Wood",
             "star_2": "Ian McKellen",
             "star_3": "Orlando Bloom",
@@ -92,7 +92,7 @@ movies = {
     "The Good, the Bad and the Ugly": 
         {
             "director": "Sergio Leone",
-            "genre": "Adventure",
+            "genre": ["Adventure","Western"],
             "star_1": "Clint Eastwood",
             "star_2": "Eli Wallach",
             "star_3": "Lee Van Cleef",
@@ -102,7 +102,7 @@ movies = {
     "Forrest Gump": 
         {
             "director": "Robert Zemeckis",
-            "genre": "Drama",
+            "genre": ["Romance","Drama"],
             "star_1": "Tom Hanks",
             "star_2": "Robin Wright",
             "star_3": "Gary Sinise",
@@ -112,7 +112,7 @@ movies = {
     "The Lord of the Rings: The Two Towers": 
         {
             "director": "Peter Jackson",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Elijah Wood",
             "star_2": "Ian McKellen",
             "star_3": "Viggo Mortensen",
@@ -122,7 +122,7 @@ movies = {
     "Fight Club": 
         {
             "director": "David Fincher",
-            "genre": "Drama",
+            "genre": ["Drama"],
             "star_1": "Brad Pitt",
             "star_2": "Edward Norton",
             "star_3": "Meat Loaf",
@@ -132,7 +132,7 @@ movies = {
     "Inception": 
         {
             "director": "Christopher Nolan",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Sci-Fi"],
             "star_1": "Leonardo DiCaprio",
             "star_2": "Joseph Gordon-Levitt",
             "star_3": "Elliot Page",
@@ -142,7 +142,7 @@ movies = {
     "Dune: Part Two": 
         {
             "director": "Denis Villeneuve",
-            "genre": "Adventure",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Timothée Chalamet",
             "star_2": "Zendaya",
             "star_3": "Rebecca Ferguson",
@@ -152,7 +152,7 @@ movies = {
     "Star Wars: Episode V - The Empire Strikes Back": 
         {
             "director": "Irvin Kershner",
-            "genre": "Adventure",
+            "genre": ["Action","Adventure","Fantasy"],
             "star_1": "Mark Hamill",
             "star_2": "Harrison Ford",
             "star_3": "Carrie Fisher",
@@ -162,7 +162,7 @@ movies = {
     "The Matrix": 
         {
             "director": "Wachowski",
-            "genre": "Sci-Fi",
+            "genre": ["Action","Sci-Fi"],
             "star_1": "Keanu Reeves",
             "star_2": "Laurence Fishburne",
             "star_3": "Carrie-Anne Moss",
@@ -172,7 +172,7 @@ movies = {
     "Goodfellas": 
         {
             "director": "Martin Scorsese",
-            "genre": "Biography",
+            "genre": ["Biography", "Crime", "Drama"],
             "star_1": "Robert De Niro",
             "star_2": "Ray Liotta",
             "star_3": "Joe Pesci",
@@ -182,7 +182,7 @@ movies = {
     "Interstellar": 
         {
             "director": "Christopher Nolan",
-            "genre": "Sci-Fi",
+            "genre": ["Sci-Fi","Adventure","Drama"],
             "star_1": "Matthew McConaughey",
             "star_2": "Anne Hathaway",
             "star_3": "Jessica Chastain",
@@ -192,7 +192,7 @@ movies = {
     "Terminator 2: Judgment Day": 
         {
             "director": "James Cameron",
-            "genre": "Sci-Fi",
+            "genre": ["Action","Adventure","Sci-Fi"],
             "star_1": "Arnold Schwarzenegger",
             "star_2": "Linda Hamilton",
             "star_3": "Edward Furlong",
@@ -202,7 +202,7 @@ movies = {
     "Star Wars: Episode IV - A New Hope": 
         {
             "director": "George Lucas",
-            "genre": "Adventure",
+            "genre": ["Action","Adventure","Fantasy"],
             "star_1": "Mark Hamill",
             "star_2": "Harrison Ford",
             "star_3": "Carrie Fisher",
@@ -212,7 +212,7 @@ movies = {
     "Back to the Future": 
         {
             "director": "Robert Zemeckis",
-            "genre": "Sci-Fi",
+            "genre": ["Comedy","Adventure","Sci-Fi"],
             "star_1": "Michael J. Fox",
             "star_2": "Christopher Lloyd",
             "star_3": "Lea Thompson",
@@ -222,7 +222,7 @@ movies = {
     "Spirited Away": 
         {
             "director": "Hayao Miyazaki",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Family"],
             "star_1": "Daveigh Chase",
             "star_2": "Suzanne Pleshette",
             "star_3": "Miyu Irino",
@@ -232,7 +232,7 @@ movies = {
     "Parasite": 
         {
             "director": "Bong Joon Ho",
-            "genre": "Drama",
+            "genre": ["Thriller","Drama"],
             "star_1": "Song Kang-ho",
             "star_2": "Lee Sun-kyun",
             "star_3": "Cho Yeo-jeong",
@@ -242,7 +242,7 @@ movies = {
     "Spider-Man: Across the Spider-Verse": 
         {
             "director": "Joaquim Dos Santos",
-            "genre": "Animation",
+            "genre": ["Action","Adventure","Animation"],
             "star_1": "Shameik Moore",
             "star_2": "Hailee Steinfeld",
             "star_3": "Brian Tyree Henry",
@@ -252,7 +252,7 @@ movies = {
     "Gladiator": 
         {
             "director": "Ridley Scott",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Russell Crowe",
             "star_2": "Joaquin Phoenix",
             "star_3": "Connie Nielsen",
@@ -262,7 +262,7 @@ movies = {
     "The Lion King": 
         {
             "director": "Roger Allers",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Drama"],
             "star_1": "Matthew Broderick",
             "star_2": "Jeremy Irons",
             "star_3": "James Earl Jones",
@@ -272,7 +272,7 @@ movies = {
     "Casablanca": 
         {
             "director": "Michael Curtiz",
-            "genre": "Drama",
+            "genre": ["War","Romance","Drama"],
             "star_1": "Humphrey Bogart",
             "star_2": "Ingrid Bergman",
             "star_3": "Paul Henreid",
@@ -282,7 +282,7 @@ movies = {
     "Django Unchained": 
         {
             "director": "Quentin Tarantino",
-            "genre": "Drama",
+            "genre": ["Western","Drama"],
             "star_1": "Jamie Foxx",
             "star_2": "Christoph Waltz",
             "star_3": "Leonardo DiCaprio",
@@ -292,7 +292,7 @@ movies = {
     "WALL-E": 
         {
             "director": "Andrew Stanton",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Family"],
             "star_1": "Ben Burtt",
             "star_2": "Elissa Knight",
             "star_3": "Jeff Garlin",
@@ -302,7 +302,7 @@ movies = {
     "Avengers: Infinity War": 
         {
             "director": "Russo",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Sci-Fi"],
             "star_1": "Robert Downey Jr.",
             "star_2": "Chris Hemsworth",
             "star_3": "Chris Evans",
@@ -312,7 +312,7 @@ movies = {
     "Spider-Man: Into the Spider-Verse": 
         {
             "director": "Bob Persichetti",
-            "genre": "Animation",
+            "genre": ["Action","Adventure","Animation"],
             "star_1": "Shameik Moore",
             "star_2": "Jake Johnson",
             "star_3": "Hailee Steinfeld",
@@ -321,18 +321,18 @@ movies = {
 
     "The Dark Knight Rises": 
         {
-            "director": "",
-            "genre": "",
-            "star_1": "",
-            "star_2": "",
-            "star_3": "",
-            "release_year": ""
+            "director": "Christopher Nolan",
+            "genre": ["Action","Thriller","Drama"],
+            "star_1": "Christian Bale",
+            "star_2": "Gary Oldman",
+            "star_3": "Tom Hardy",
+            "release_year": "2012"
         },
 
     "Toy Story": 
         {
             "director": "John Lasseter",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Comedy"],
             "star_1": "Tom Hanks",
             "star_2": "Tim Allen",
             "star_3": "Don Rickles",
@@ -342,7 +342,7 @@ movies = {
     "Braveheart": 
         {
             "director": "Mel Gibson",
-            "genre": "Biography",
+            "genre": ["Biography","War","Drama"],
             "star_1": "Mel Gibson",
             "star_2": "Sophie Marceau",
             "star_3": "Patrick McGoohan",
@@ -352,7 +352,7 @@ movies = {
     "Joker": 
         {
             "director": "Todd Phillips",
-            "genre": "Thriller",
+            "genre": ["Crime","Thriller","Drama"],
             "star_1": "Joaquin Phoenix",
             "star_2": "Robert De Niro",
             "star_3": "Zazie Beetz",
@@ -362,7 +362,7 @@ movies = {
     "Avengers: Endgame": 
         {
             "director": "Russo",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Drama"],
             "star_1": "Robert Downey Jr.",
             "star_2": "Chris Evans",
             "star_3": "Chris Hemsworth",
@@ -372,7 +372,7 @@ movies = {
     "Princess Mononoke": 
         {
             "director": "Hayao Miyazaki",
-            "genre": "Animation",
+            "genre": ["Action","Adventure","Animation"],
             "star_1": "Yôji Matsuda",
             "star_2": "Yuriko Ishida",
             "star_3": "Yûko Tanaka",
@@ -382,7 +382,7 @@ movies = {
     "Your Name.": 
         {
             "director": "Makoto Shinkai",
-            "genre": "Animation",
+            "genre": ["Animation","Fantasy","Romance"],
             "star_1": "Ryunosuke Kamiki",
             "star_2": "Mone Kamishiraishi",
             "star_3": "Ryo Narita",
@@ -392,7 +392,7 @@ movies = {
     "Oppenheimer": 
         {
             "director": "Christopher Nolan",
-            "genre": "Biography",
+            "genre": ["Biography","History","Drama"],
             "star_1": "Cillian Murphy",
             "star_2": "Emily Blunt",
             "star_3": "Matt Damon",
@@ -402,7 +402,7 @@ movies = {
     "2001: A Space Odyssey": 
         {
             "director": "Stanley Kubrick",
-            "genre": "Sci-Fi",
+            "genre": ["Sci-Fi","Adventure"],
             "star_1": "Keir Dullea",
             "star_2": "Gary Lockwood",
             "star_3": "William Sylvester",
@@ -412,7 +412,7 @@ movies = {
     "Up": 
         {
             "director": "Pete Docter",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Comedy"],
             "star_1": "Edward Asner",
             "star_2": "Jordan Nagai",
             "star_3": "John Ratzenberger",
@@ -422,7 +422,7 @@ movies = {
     "The Wolf of Wall Street": 
         {
             "director": "Martin Scorsese",
-            "genre": "Comedy",
+            "genre": ["Biography","Comedy","Crime"],
             "star_1": "Leonardo DiCaprio",
             "star_2": "Jonah Hill",
             "star_3": "Margot Robbie",
@@ -432,7 +432,7 @@ movies = {
     "Jurassic Park": 
         {
             "director": "Steven Spielberg",
-            "genre": "Action",
+            "genre": ["Action","Adventure","Sci-Fi"],
             "star_1": "Sam Neill",
             "star_2": "Laura Dern",
             "star_3": "Jeff Goldblum",
@@ -442,7 +442,7 @@ movies = {
     "Finding Nemo": 
         {
             "director": "Andrew Stanton",
-            "genre": "Animation",
+            "genre": ["Animation","Adventure","Comedy"],
             "star_1": "Albert Brooks",
             "star_2": "Ellen DeGeneres",
             "star_3": "Alexander Gould",
