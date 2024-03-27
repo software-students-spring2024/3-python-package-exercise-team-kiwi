@@ -6,7 +6,19 @@
 We wanted to create a package that allows users to generate different kinds of media. We figured this kind of package could potentially be used to easily populate datasets or to generate lists of certain types of media that are popular right now (assuming we keep our datasets updated). The package comes with four functions that allow users to return different songs, movies, TV shows, and current events. 
 
 ## Installation
-Sang
+
+1). Make a pipenv virtual environment and install the latest version of the package using: pipenv install -i https://test.pypi.org/simple/ pyrandommedia.
+2). Start the virtual environment with the command: pipenv shell.
+3). Create a Python program file that imports the functions and uses it.
+Example:
+`from pyrandommedia import get_news`
+`from pyrandommedia import get_random_TV_show`
+`from pyrandommedia import get_song`
+`from pyrandommedia import get_movie`
+
+4). Run the program using: python3 -m sample_program.py. Run the python command in the virtual environment.
+5). Use the command exit to end the virtual environment.
+
 
 ## Usage
 Once installed and imported, you can call each function to generate a certain kind of media.
