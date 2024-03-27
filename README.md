@@ -36,8 +36,6 @@ You can call the get_song() function to generate a song in a specific genre, wit
 The variable fav_song will now contain a tuple holding a song in the Pop genre by an artist/band with the word "One" in it. An example tuple would look like this: 
 ![song output](./images/song_output.png)
 
-Additionally, if no song meeting the arguments' criteria is found, get_song() will return a string. 
-
 ### get_news()
 
 You can call the get_news() function to generate a list of current events. The function takes a dictionary as an argument that optionally allows the user to only return a certain number of events as well as news title with a certain string in them. 
@@ -60,11 +58,32 @@ The variable movie will now contain a dictionary holding a movie in the action g
 
 ### get_random_TV_show()
 
-Sang- just copy the format above for your function
+You can call the get_random_TV_show() function to generate a dictionary that optionally holds any number of of the following attributes: title, director, cast, country, date_added, release_year, rating, duration, listed_in, description
+
+![tv show example](./images/tv_example.png)
+
+The variable tv_show will now hold a dictionary that contains a random TV show's title, director, cast, and release year
+
+![tv show output](./images/tv_output.png)
 
 ## Function Documentation
-Sang
-Include link to example program here too
+### get_song()
+
+Required arguments: genre
+
+Optional arguments: artist, song_name, release_date
+
+Return Type: Dictionary
+
+All arguments must be strings or the function will raise a TypeError. 
+
+The function will iterate through our dictionary of songs and add all of the songs that match the initial inputs into a new dictionary of possible songs. Then, the function will randomly choose and return one of the songs from this new dictionary. If no songs were found, the function will return a string saying so. 
+
+### get_news()
+
+### get_movie()
+
+### get_random_TV_show()
 
 ## How to contribute (Virtual environment, install dependencies, and build and test your package)
 
@@ -94,5 +113,4 @@ Here's the link to our package on PyPI:
 
 
 [Link](https://test.pypi.org/project/pyrandommedia/)
-
 
